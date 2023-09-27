@@ -1,0 +1,149 @@
+h1,h2 {
+    color: darkviolet; 
+    text-align: center;
+    font-family: "MingLiU-ExtB";
+}
+
+h3 {
+    font-family: "MingLiU-ExtB";
+}
+
+p {
+    text-align: justify;
+}
+
+.important{
+    font-weight:700;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+#search-form {
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1;
+}
+
+#search-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Style du conteneur principal */
+.container {
+    justify-content: center; /* Centrer horizontalement */
+    align-items: flex-start; /* Aligner le contenu en haut de la boîte */
+    min-height: 100vh; /* Utilise toute la hauteur de la vue */
+
+}
+
+/* Style de la barre latérale gauche */
+.sidebar {
+    background-color: #333; /* Couleur de fond de la barre latérale */
+    color: white;
+    width: 250px; /* Largeur de la barre latérale */
+    padding: 20px;
+    margin-top: 80px;
+}
+
+/* Style du contenu principal */
+.main-content {
+    max-width: 800px; /* Largeur maximale du contenu principal */
+    padding:20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+}
+
+body{
+    background: linear-gradient(to bottom, #800080, #ffc0cb);
+}
+
+header {
+    background-color: #333; 
+    color: #fff; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100; /* Assure que le header est au-dessus du contenu de la page */
+}
+
+.entete {
+    width: 90%; /* Largeur du contenu du header */
+    max-width: 1200px; /* Largeur maximale du contenu du header */
+    margin: 0 auto; /* Centre le contenu horizontalement */
+    display: flex; /* Utilise la disposition flexbox */
+    justify-content: space-between; /* Place les éléments à l'extrémité gauche et droite */
+    align-items: center; /* Centre les éléments verticalement */
+}
+
+a:active{
+    color:deeppink
+}
+
+a:hover{
+    color:deeppink
+}
+
+.apropos{
+    color:#fff;
+    text-align: right;
+}
+
+.autobio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 600px; /* Largeur maximale du carrousel */
+    margin: 0 auto;
+    overflow: hidden; /* Masque les images débordantes */
+}
+
+.carousel {
+    display: flex; /* Utilisation de flexbox pour disposer les images horizontalement */
+    transition: transform 0.5s ease; /* Animation de transition fluide */
+}
