@@ -1,12 +1,12 @@
 var slidePosition = 1;
 SlideShow(slidePosition);
 
-// forward/Back controls
+// boutons avant/arrière
 function plusSlides(n) {
   SlideShow(slidePosition += n);
 }
 
-//  images controls
+//  contrôles d'image
 function currentSlide(n) {
   SlideShow(slidePosition = n);
 }

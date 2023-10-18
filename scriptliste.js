@@ -39,15 +39,6 @@ const recettes = [
     }
   ]
   
-//   const recetteList = document.getElementById("recette-list");
-  
-//   // Parcourez les recettes et affichez les noms dans une liste.
-//   recettes.forEach(recette => {
-//       const listItem = document.createElement("li");
-//       listItem.textContent = recette.name;
-//       recetteList.appendChild(listItem);
-//   });
-
 
 const recetteList = document.getElementById("recette-list");
 
@@ -60,7 +51,7 @@ recettes.forEach(recette => {
     const recipeTitle = document.createElement("h3");
 
     // Définir l'attribut "href" du lien pour diriger vers la page de la recette.
-    recipeLink.href = recette.lien; // Remplacer "page-de-la-recette.html" par le chemin de la page de la recette.
+    recipeLink.href = recette.lien; 
 
     // Définir l'image de la recette et le titre.
     recipeImage.src = recette.image;

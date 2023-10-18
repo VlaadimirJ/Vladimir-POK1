@@ -148,19 +148,18 @@ a:hover{
     transition: transform 0.5s ease; /* Animation de transition fluide */
 }
 
-/* Slideshow container */
 .slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
   }
   
-  /* Make the images invisible by default */
+  /* Rendre les images invisibles par défaut */
   .Containers {
     display: none;
   }
   
-  /* forward & Back buttons */
+  /* Boutons du caroussel */
   .Back, .forward {
     cursor: pointer;
     position: absolute;
@@ -176,18 +175,15 @@ a:hover{
     user-select: none;
   }
   
-  /* Place the "forward button" to the right */
   .forward {
     right: 0;
     border-radius: 4px 0 0 4px;
   }
   
-  /*when the user hovers,add a black background with some little opacity */
   .Back:hover, .forward:hover {
     background-color: rgba(0,0,0,0.8);
   }
   
-  /* Caption Info */
   .Info {
     color: #e3e3e3;
     font-size: 16px;
