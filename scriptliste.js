@@ -5,6 +5,7 @@ const recettes = [
     {
         "name": "Nouilles instantanées",
         "image": "images/nouilles.png",
+        "lien":"recette_test.html",
         "ingredients": [
             "1 oeuf",
             "1 paquet de nouilles instantanées"
@@ -19,6 +20,7 @@ const recettes = [
     {
         "name": "Hamburger",
         "image": "images/burger.JPG",
+        "lien":"recette_burger.html",
         "ingredients": [
             "1 steak",
             "1 pain burger",
@@ -49,7 +51,7 @@ const recettes = [
 
 const recetteList = document.getElementById("recette-list");
 
-// Parcourez les recettes et affichez les éléments pour chaque recette.
+// Parcourir les recettes et afficher les éléments pour chaque recette.
 recettes.forEach(recette => {
     const listItem = document.createElement("li");
     const recipeLink = document.createElement("a");
@@ -57,22 +59,22 @@ recettes.forEach(recette => {
     recipeImage.classList.add("recipe-image");
     const recipeTitle = document.createElement("h3");
 
-    // Définissez l'attribut "href" du lien pour diriger vers la page de la recette.
-    recipeLink.href = "page-de-la-recette.html"; // Remplacez "page-de-la-recette.html" par le chemin de la page de la recette.
+    // Définir l'attribut "href" du lien pour diriger vers la page de la recette.
+    recipeLink.href = recette.lien; // Remplacer "page-de-la-recette.html" par le chemin de la page de la recette.
 
-    // Définissez l'image de la recette et le titre.
+    // Définir l'image de la recette et le titre.
     recipeImage.src = recette.image;
     recipeImage.alt = recette.name;
     recipeTitle.textContent = recette.name;
 
-    // Ajoutez l'image et le titre à l'élément <a>.
+    // Ajouter l'image et le titre à l'élément <a>.
     recipeLink.appendChild(recipeImage);
     recipeLink.appendChild(recipeTitle);
 
-    // Ajoutez le lien à l'élément de liste <li>.
+    // Ajouter le lien à l'élément de liste <li>.
     listItem.appendChild(recipeLink);
 
-    // Ajoutez l'élément de liste <li> à la liste <ul>.
+    // Ajouter l'élément de liste <li> à la liste <ul>.
     recetteList.appendChild(listItem);
 });
 

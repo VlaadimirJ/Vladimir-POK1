@@ -4,70 +4,37 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>Recette de cuisine</title>
-    <script src="script.js"></script>
+    <script src="modele_recette.js"></script>
 </head>
 <body>
-    <div>
-        <header>
-            <div class="entete">
-                <a href="index.html" class="lien_titre"><h1>La Cuisine de Vlad</h1></a>
-                <a href="a-propos.html" class="apropos">À propos du créateur</a>
-                <a href="liste_recette.html" class="apropos">Toutes les recettes</a>
-                <div class="search-bar">
-                    <input type="text" placeholder="Rechercher recette, ingrédient,...">
-                    <button type="button">Rechercher</button>
-                </div>
+    <header>
+        <div class="entete">
+            <a href="index.html" class="lien_titre"><h1>La Cuisine de Vlad</h1></a>
+            <a href="a-propos.html" class="apropos">À propos du créateur</a>
+            <a href="liste_recette.html" class="apropos">Toutes les recettes</a>
+            <a href="tags.html" class="apropos">Tags</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher recette, ingrédient,...">
+                <button type="button">Rechercher</button>
             </div>
-        </header>
-        <main class="main-content">
-            <h2 id = "nouilles instantanées">Nouilles instantanées</h2>
-             <!-- Slideshow container -->
-            <div class="slideshow-container fade">
-
-                <!-- Full images with numbers and message Info -->
-                <div class="Containers">
-                <div class="MessageInfo">1 / 3</div>
-                <img src="images/paquet.jpg" style="height:200px">
-                <div class="Info">Le paquet</div>
-                </div>
-            
-                <div class="Containers">
-                <div class="MessageInfo">2 / 3</div>
-                <img src="images/nouilles.png" style="height:200px">
-                <div class="Info">Le plat</div>
-                </div>
-            
-                <div class="Containers">
-                <div class="MessageInfo">3 / 3</div>
-                <img src="images/ciel.jpg" style="height:200px">
-                <div class="Info">Image test</div>
-                </div>
-            
-                <!-- Back and forward buttons -->
-                <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="forward" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <br>
-            <article class="recette">
-                <h3>Ingrédients (pour 1 personne):</h3><hr>
-                <ul>
-                    <li>1 paquet de nouilles instantanés</li>
-                    <li>1 oeuf</li>
-                </ul>
-            </article>
-                <h3>Instructions</h3><hr>
-                <ul>
-                    <li>Suivre les instructions sur le paquet</li>
-                    <li>Une fois les nouilles cuites, les servir dans l'assiette SANS le bouillon</li>
-                    <li>Tout en laissant le bouillon sur le feu, y rajouter l'oeuf et laisser <span class = "important">1 minute</span></li>
-                    <li>Rajouter le bouillon aux pâtes. Bon appétit ! </li>
-                </ul>
-                <p>Suggestions d'accompagnement : Kimchi (grande surface c'est bien, c'est trop dur à préparer), viande, 
-                    pousses de haricots mungo.</p>
-            <footer>
-                <p>&copy; 2023 Vladimir</p>
-            </footer>
-        </main>
-    </div>
+        </div>
+    </header>
+    <main class="main-content">
+        <h2 id = "nouilles instantanées">Hamburger</h2>
+            <!-- Slideshow container -->
+        <img src="images/burger.JPG" alt="Hamburger" style="height:200px">
+        <br>
+        <article class="recette">
+            <h3>Ingrédients (pour 1 personne):</h3><hr>
+            <ul id="ingredient-list">
+            </ul>
+        </article>
+            <h3>Instructions</h3><hr>
+            <ul id="instructions-list">
+            </ul>
+        <footer>
+            <p>&copy; 2023 Vladimir</p>
+        </footer>
+    </main>
 </body>
 </html>
