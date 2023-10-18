@@ -1,32 +1,29 @@
-const carousel = document.querySelector('.carousel');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
-const slideWidth = carousel.clientWidth;
-let currentIndex = 0;
+var slidePosition = 1;
+SlideShow(slidePosition);
 
-prevButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        carousel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-    }
-});
+// forward/Back controls
+function plusSlides(n) {
+  SlideShow(slidePosition += n);
+}
 
-nextButton.addEventListener('click', () => {
-    const numSlides = carousel.children.length;
-    if (currentIndex < numSlides - 1) {
-        currentIndex++;
-        carousel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-    }
-});
+//  images controls
+function currentSlide(n) {
+  SlideShow(slidePosition = n);
+}
 
+function SlideShow(n) {
+  var i;
+  var slides = document.getElementsByClassName("Containers");
+  var circles = document.getElementsByClassName("dots");
+  if (n > slides.length) {slidePosition = 1}
+  if (n < 1) {slidePosition = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < circles.length; i++) {
+      circles[i].className = circles[i].className.replace(" enable", "");
+  }
+  slides[slidePosition-1].style.display = "block";
+  circles[slidePosition-1].className += " enable";
+} 
 
-document.getElementById('search-form').addEventListener('submit', function (e) {
-    e.preventDefault(); // Empêche la soumission du formulaire par défaut
-
-    // Récupérer le terme de recherche saisi par l'utilisateur
-    const searchTerm = document.getElementById('search-input').value;
-
-    // Effectuer une action de recherche (par exemple, AJAX) ici avec searchTerm
-    // Afficher les résultats ou rediriger vers une page de résultats
-    alert('Vous avez recherché : ' + searchTerm);
-});
